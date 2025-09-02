@@ -24,11 +24,16 @@ This project demonstrates full-stack web development with authentication, file u
 ### Login Page
 <img width="1837" height="547" alt="login" src="https://github.com/user-attachments/assets/798fdf78-04ea-4023-a761-4e6f83a9316d" />
 
+### Signup Page
+<img width="1820" height="877" alt="signup" src="https://github.com/user-attachments/assets/f9bc7d9b-727b-4cca-be58-5ee5724c46d4" />
+
 
 ### Sighting Report Form
+<img width="1785" height="831" alt="report_sighting" src="https://github.com/user-attachments/assets/663259c8-94ba-4bbf-b0d1-3d48e47c370f" />
 
 
 ### Sightings Viewer
+<img width="1513" height="586" alt="sighting_view" src="https://github.com/user-attachments/assets/fe64e9a2-5a93-4f92-8874-eb87c1461deb" />
 
 
 ---
