@@ -28,7 +28,7 @@ This project demonstrates full-stack web development with authentication, file u
 ![Report Form](static/screenshots/report_form.png)
 
 ### Sightings Viewer
-![Sightings Viewer](static/screenshots/sightings.png)
+![Sightings Viewer](<img width="1516" height="574" alt="image" src="https://github.com/user-attachments/assets/0033107e-3955-47b3-a330-70ab1c630a8e" />)
 
 ---
 
