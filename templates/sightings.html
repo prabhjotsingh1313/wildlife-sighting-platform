@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{# Inherits the main layout, navigation, and styles from base.html #}
+
+{% block content %}
+<h1>My Glider Sightings</h1>
+
+{# Check if the 'sightings' list contains any items #}
+{% if sightings %}
+
+<!-- Flex container for displaying sighting cards in rows -->
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+    {# Loop through each sighting and display its details in a card #}
+    {% for sighting in sightings %}
+    <div class="card" style="width: 300px;">
+        <p>
+            <!-- Display the full name and email of the reporter -->
+            <strong>{{ sighting.fname }} {{ sighting.lname }}</strong> ({{ sighting.email }})<br>
+
+            <!-- Description of the glider sighting -->
+            <em>{{ sighting.description }}</em><br><br>
+
+            <!-- Date and time of the sighting -->
+            <strong>Seen on:</strong> {{ sighting.date }} at {{ sighting.time }}<br>
+
+            <!-- Location and coordinates (if available) -->
+            <strong>Location:</strong> {{ sighting.address }}
+            {% if sighting.latitude and sighting.longitude %}
+                ({{ sighting.latitude }}, {{ sighting.longitude }})
+            {% endif %}
+            <br><strong>{{ sighting.state }} {{ sighting.country }}</strong>
+        </p>
+
+        {# Display uploaded media: image or video #}
+        {% if sighting.file_path %}
+            {% if sighting.file_path.endswith(('jpg', 'jpeg', 'png')) %}
+                <!-- Display image -->
+                <img src="{{ url_for('static', filename=sighting.file_path) }}"
+                     alt="Sighting Image"
+                     style="width: 100%; height: auto; margin-top: 10px;">
+            {% elif sighting.file_path.endswith(('mp4', 'webm', 'ogg')) %}
+                <!-- Display video -->
+                <video controls style="width: 100%; height: auto; margin-top: 10px;">
+                    <source src="{{ url_for('static', filename=sighting.file_path) }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% endif %}
+        {% endif %}
+    </div>
+    {% endfor %}
+
+</div>
+
+<!-- Pagination controls for navigating through pages of sightings -->
+<div style="margin-top: 20px; text-align: center;">
+    {% if page > 1 %}
+        <a href="{{ url_for('sightings', page=page-1) }}">Previous</a>
+    {% endif %}
+
+    <span> Page {{ page }} of {{ total_pages }} </span>
+
+    {% if page < total_pages %}
+        <a href="{{ url_for('sightings', page=page+1) }}">Next</a>
+    {% endif %}
+</div>
+
+{% else %}
+    {# Message to show when user has no sightings yet #}
+    <p style="font-size: 20px; color: #666; margin-top: 40px; text-align:center;">
+        No sightings reported yet. 🦉🌿
+    </p>
+{% endif %}
+{% endblock %}

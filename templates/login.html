@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{# Inherit layout, styling, and navigation bar from base.html #}
+
+{% block content %}
+<h1>Login</h1>
+
+<!-- Login form that submits via POST to the same route -->
+<form method="POST">
+
+    <!-- Username input field (required) -->
+    <label>Username*</label>
+    <input type="text" name="username" required>
+
+    <!-- Password input field (required) -->
+    <label>Password*</label>
+    <input type="password" name="password" required>
+
+    <!-- Submit button to log in -->
+    <input type="submit" value="Login">
+</form>
+
+<!-- Link to sign-up page if user doesn't have an account -->
+<p style="text-align: center; margin-top: 20px;">
+    Don't have an account?
+    <a href="{{ url_for('signup') }}">Sign up here</a>.
+</p>
+{% endblock %}

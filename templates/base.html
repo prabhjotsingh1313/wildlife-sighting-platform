@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Queensland Glider Network</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* --- Navbar Styling --- */
+        nav {
+            background-color: darkslategray;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #3e8e41;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; /* light green background */
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        ul.flash-messages {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        ul.flash-messages li {
+            background-color: darkslategray;
+            color: white;
+            border: 1px solid #c3e6cb;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+
+        {% if 'username' in session %}
+            <li><a href="{{ url_for('report') }}">Report a Sighting</a></li>
+            <li><a href="{{ url_for('sightings') }}">View Sightings</a></li>
+        {% endif %}
+
+        <li><a href="{{ url_for('team') }}">Our Team</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+
+        {% if 'username' in session %}
+            <li><a href="{{ url_for('logout') }}">Logout ({{ session['username'] }})</a></li>
+        {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('signup') }}">Signup</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+<div class="content">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flash-messages">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

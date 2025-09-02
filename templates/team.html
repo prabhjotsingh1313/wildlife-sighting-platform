@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Team Banner -->
+<img src="{{ url_for('static', filename='images/banner.png') }}" alt="Team Banner" style="width:100%; height:400px; object-fit: cover;">
+
+<h2 style="text-align:center; margin-top: 20px;">Meet The Team</h2>
+
+<br>
+
+<!-- Team Members -->
+<div class="row" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 20px;">
+
+    <!-- Team Member 1 -->
+    <div class="card" style="width:300px; background:white; box-shadow:0 4px 8px 0 rgba(0,0,0,0.2); border-radius:10px; overflow:hidden;">
+        <img src="{{ url_for('static', filename='images/raghav.jpg') }}" alt="Raghav" style="width:100%;">
+        <div class="container" style="padding:16px;">
+            <h2>Prabhjot Singh</h2>
+            <p class="title" style="color:grey;">CEO & Founder</p>
+            <p>Passionate about wildlife conservation, I work hands-on to protect glider populations, restore habitats, and lead workshops across Queensland.</p>
+            <p>rgaur1@eq.edu.au</p>
+        </div>
+    </div>
+
+    <!-- Team Member 2 -->
+    <div class="card" style="width:300px; background:white; box-shadow:0 4px 8px 0 rgba(0,0,0,0.2); border-radius:10px; overflow:hidden;">
+        <img src="{{ url_for('static', filename='images/johnsmith.jpg') }}" alt="John Smith" style="width:100%;">
+        <div class="container" style="padding:16px;">
+            <h2>John Smith</h2>
+            <p class="title" style="color:grey;">Videographer</p>
+            <p>Captures stunning wildlife photography, showcasing the beauty and behavior of gliders in Queensland’s forests.</p>
+            <p>john888@eq.edu.au</p>
+        </div>
+    </div>
+
+    <!-- Team Member 3 -->
+    <div class="card" style="width:300px; background:white; box-shadow:0 4px 8px 0 rgba(0,0,0,0.2); border-radius:10px; overflow:hidden;">
+        <img src="{{ url_for('static', filename='images/janedoe.jpg') }}" alt="Jane Doe" style="width:100%;">
+        <div class="container" style="padding:16px;">
+            <h2>Jane Doe</h2>
+            <p class="title" style="color:grey;">Sponsor</p>
+            <p>Jane is dedicated to the cause, donating millions to conservation efforts to protect Australia’s glider populations.</p>
+            <p>jane@qld.edu.au</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

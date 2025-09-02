@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Contact Us</h1>
+
+<form action="/submit_contact" method="POST">
+    Full Name*: <input type="text" name="fullname" required> <br><br>
+    Email*: <input type="email" name="email" required> <br><br>
+    Phone*: <input type="text" name="phone" required> <br><br>
+    Message*: <textarea name="message" required></textarea><br><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

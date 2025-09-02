@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Queensland Glider Network</h1>
+
+{% if 'username' in session %}
+    <h2 style="color: #2e7d32;">Hello, {{ session['username'] }}! 👋</h2>
+    <p>Thank you for supporting glider conservation!</p>
+{% else %}
+    <p>Please <a href="{{ url_for('login') }}">login</a> or <a href="{{ url_for('signup') }}">signup</a> to join our conservation efforts.</p>
+{% endif %}
+
+<p style="margin-top: 20px;">Home → Our Work → Conservation Programs → Queensland Glider Network</p>
+
+<h2>Report a Glider Sighting</h2>
+<p>The Queensland Glider Network (QGN) was established in early 2006 to support glider populations by being a statewide hub for communication, education, data collection, mapping, and information exchange.</p>
+
+<h3>Our Aims</h3>
+<p>Australia and parts of South-East Asia are home to the world’s only gliding marsupials. The smallest glider species, the feathertail glider (<em>Acrobates pygmaeus</em>), and the largest, the southern and central greater glider (<em>Petauroides volans</em>), both rely on the eucalypt forests and woodlands of eastern Australia.</p>
+
+<p>Vegetation clearing, along with climate change-induced increases in bushfires, has driven declines in all glider species. However, greater gliders and yellow-bellied gliders have suffered the most. Both are now threatened under Commonwealth and Queensland legislation.</p>
+
+<p>The goal of the QGN is to raise awareness of gliders and their habitat requirements across Queensland. We aim to:</p>
+
+<ul>
+    <li>Promote glider-friendly landscape management</li>
+    <li>Enhance habitat within remnant glider populations</li>
+    <li>Implement monitoring programs for local glider populations</li>
+    <li>Work with governments to implement conservation projects</li>
+    <li>Educate communities via workshops, webinars, and spotlighting events</li>
+    <li>Partner with landcare and rehabilitation groups</li>
+</ul>
+
+<h3>Gliders of Australia</h3>
+<p>Australia is home to around 10 glider species!</p>
+
+{% endblock %}

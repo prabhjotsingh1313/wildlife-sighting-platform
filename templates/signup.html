@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Signup</h1>
+
+<form method="POST">
+    <label>First Name*</label>
+    <input type="text" name="firstname" required>
+
+    <label>Last Name*</label>
+    <input type="text" name="lastname" required>
+
+    <label>Username*</label>
+    <input type="text" name="username" required>
+
+    <label>Email*</label>
+    <input type="email" name="email" required>
+
+    <label>Password*</label>
+    <input type="password" name="password" required>
+
+    <label>Confirm Password*</label>
+    <input type="password" name="confirm_password" required>
+
+    <input type="submit" value="Sign Up">
+</form>
+
+<p style="text-align: center; margin-top: 20px;">
+    Already have an account? <a href="{{ url_for('login') }}">Login here</a>.
+</p>
+{% endblock %}
