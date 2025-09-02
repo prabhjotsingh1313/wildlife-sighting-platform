@@ -22,13 +22,13 @@ This project demonstrates full-stack web development with authentication, file u
 *(Replace the image links below with your actual screenshots — store them in `/static/screenshots` or link externally.)*
 
 ### Login Page
-![Login Page](static/screenshots/login.png)
+![Login Page](static/uploads/login.png)
 
 ### Sighting Report Form
-![Report Form](static/screenshots/report_form.png)
+![Report Form](static/uploads/report_form.png)
 
 ### Sightings Viewer
-![Sightings Viewer](<img width="1516" height="574" alt="image" src="https://github.com/user-attachments/assets/0033107e-3955-47b3-a330-70ab1c630a8e" />)
+![Sightings Viewer](static/uploads/sighting_view.png)
 
 ---
 
