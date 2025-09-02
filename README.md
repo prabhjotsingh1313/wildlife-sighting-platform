@@ -35,6 +35,16 @@ This project demonstrates full-stack web development with authentication, file u
 ### Sightings Viewer
 <img width="1513" height="586" alt="sighting_view" src="https://github.com/user-attachments/assets/fe64e9a2-5a93-4f92-8874-eb87c1461deb" />
 
+## Data flow 
+### Register Data Flow
+<img width="728" height="329" alt="image" src="https://github.com/user-attachments/assets/a5286b38-c7a5-4af7-96b0-98881da68d6d" />
+
+### Login Data Flow
+<img width="728" height="419" alt="image" src="https://github.com/user-attachments/assets/4b10de62-0e6c-4016-8274-da1aa5b6d501" />
+
+### Sightings Data Flow
+<img width="728" height="419" alt="image" src="https://github.com/user-attachments/assets/60061c26-39b9-4b08-8241-f386393b78e5" />
+
 
 ---
 
